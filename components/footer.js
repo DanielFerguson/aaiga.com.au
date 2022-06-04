@@ -91,14 +91,14 @@ const navigation = {
 
 const Footer = () => {
   return (
-    <footer className="bg-white mt-32" aria-labelledby="footer-heading">
+    <footer className="mt-32" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
       <div className="max-w-7xl mx-auto">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
-            <div className="h-10 relative">
+            <div className="h-10 relative w-10">
               <Image layout="fill" src="/aaiga-logo.svg" alt="Aaiga" />
             </div>
             <p className="text-gray-500 text-base">
@@ -121,7 +121,7 @@ const Footer = () => {
           <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">
                   aaiga
                 </h3>
                 <ul role="list" className="mt-4 space-y-4">
@@ -138,7 +138,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">
                   Projects
                 </h3>
                 <ul role="list" className="mt-4 space-y-4">
@@ -157,7 +157,7 @@ const Footer = () => {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">
                   Company
                 </h3>
                 <ul role="list" className="mt-4 space-y-4">
@@ -174,7 +174,7 @@ const Footer = () => {
                 </ul>
               </div>
               {/* <div className="mt-12 md:mt-0">
-                  <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                  <h3 className="text-sm font-semibold text-gray-600 tracking-wider uppercase">
                     Legal
                   </h3>
                   <ul role="list" className="mt-4 space-y-4">
@@ -194,7 +194,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-12 border-t border-gray-200 pt-8">
-          <p className="text-base text-gray-400 xl:text-center">
+          <p className="text-base text-gray-600 xl:text-center">
             &copy; 2022 Aaiga, Inc. All rights reserved.
           </p>
         </div>

@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["cms.aaiga.com.au", "secure.gravatar.com"],
+    domains: ["cms.aaiga.com.au", "secure.gravatar.com", "images.unsplash.com"],
   },
 };
 

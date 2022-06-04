@@ -1,33 +1,20 @@
 import Layout from "@/components/layout";
 import NewsletterCta from "@/components/newsletter-cta";
 import { getUsers } from "@/lib/wordpress";
+import { NextSeo } from "next-seo";
 import Image from "next/image";
 import Link from "next/link";
 
-const people = [
-  {
-    name: "Emma Dorsey",
-    role: "Senior Front-end Developer",
-    imageUrl:
-      "https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-    bio: "Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.",
-    twitterUrl: "#",
-    linkedinUrl: "#",
-  },
-  {
-    name: "Emma Dorsey",
-    role: "Senior Front-end Developer",
-    imageUrl:
-      "https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-    bio: "Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.",
-    twitterUrl: "#",
-    linkedinUrl: "#",
-  },
-];
+const title = "Meet our authors";
+const description =
+  "We're innovators, challengers and doers. We build businesses and startups one day, write about and teach lessons the next.";
+const url = "https://aaiga.com.au/authors";
 
 const Authors = ({ authors }) => {
   return (
     <Layout>
+      <NextSeo title={title} description={description} canonical={url} />
+
       <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
         <div className="space-y-5 sm:space-y-4">
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">

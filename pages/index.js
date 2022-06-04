@@ -6,16 +6,15 @@ import * as dayjs from "dayjs";
 import { Menu } from "@headlessui/react";
 import { MenuIcon } from "@heroicons/react/outline";
 
-import BgDaonate from "../public/assets/index/bg-daonate.jpg";
-import BgObserver from "../public/assets/index/bg-observer.jpg";
+import BgDaonate from "../public/assets/index/bg-observer.jpg";
+import BgObserver from "../public/assets/index/bg-yfocus.jpg";
 import BgPerfectWorld from "../public/assets/index/bg-perfect-world.jpg";
-import BgYfocus from "../public/assets/index/bg-yfocus.jpg";
+import BgYfocus from "../public/assets/index/bg-daonate.jpg";
 
 import BgOnwards from "../public/assets/index/bg-onwards.png";
 import BgUpwards from "../public/assets/index/bg-upwards.png";
 import BgSimpleSeo from "../public/assets/index/bg-simple-seo.png";
-import NavBar from "@/components/navbar";
-import Footer from "@/components/footer";
+
 import NewsletterCta from "@/components/newsletter-cta.js";
 import Layout from "@/components/layout";
 
@@ -77,7 +76,7 @@ const title = "Accelerate your startup journey";
 const description = "This example uses more of the available config options.";
 const url = "https://aaiga.com.au";
 
-const PrettySpanLink = ({ item }) => {
+const PrettySpanLink = ({ item, priority = false }) => {
   return (
     <div
       className={[
@@ -88,7 +87,8 @@ const PrettySpanLink = ({ item }) => {
     >
       <Image
         src={item.image}
-        alt={item.name}
+        alt={item.title}
+        priority={priority}
         layout="fill"
         objectFit="cover"
         objectPosition="center"
@@ -174,12 +174,13 @@ export default function Home({ articles }) {
   return (
     <Layout>
       <NextSeo title={title} description={description} canonical={url} />
+
       <main className="grid gap-24">
         {/* Projects */}
         <section>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {projects.map((project, index) => (
-              <PrettySpanLink key={index} item={project} />
+              <PrettySpanLink key={index} item={project} priority={true} />
             ))}
           </div>
           <div className="mt-8 text-center">

@@ -1,13 +1,18 @@
-import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import { ExternalLinkIcon } from "@heroicons/react/solid";
-import Layout from "@/components/layout";
 import Image from "next/image";
+import Layout from "@/components/layout";
+import { NextSeo } from "next-seo";
+import { ExternalLinkIcon } from "@heroicons/react/solid";
+
+const title = "Say g'day!";
+const description =
+  "No matter the size of your project, problem or requirement - we're here for you. Learning, building or scaling, we've got the resources you need to scale personally and professionally.";
+const url = "https://aaiga.com.au/contact";
 
 const Contact = () => {
   return (
     <Layout>
+      <NextSeo title={title} description={description} canonical={url} />
+
       {/* Header */}
       <div className="pb-24 sm:pb-32">
         <div className="max-w-md mx-auto pl-4 pr-8 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:px-8">
@@ -26,7 +31,7 @@ const Contact = () => {
       <div className="relative">
         <div className="lg:absolute lg:inset-0">
           <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <div className="h-56 w-full relative">
+            <div className="h-full w-full relative">
               <Image
                 className="object-cover rounded lg:absolute lg:h-full"
                 layout="fill"

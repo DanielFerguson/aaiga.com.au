@@ -3,16 +3,20 @@ import NewsletterCta from "@/components/newsletter-cta";
 import { getPosts } from "@/lib/wordpress";
 import { AnnotationIcon } from "@heroicons/react/outline";
 import dayjs from "dayjs";
+import { NextSeo } from "next-seo";
 import Image from "next/image";
 import Link from "next/link";
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+const title = "Stay up-to-date with the next generation of business";
+const description =
+  "Product comparisons, case studies and courses - we want to help accelerate you to wherever you need to be.";
+const url = "https://aaiga.com.au/articles";
 
 const Articles = ({ latestArticle, articles }) => {
   return (
     <Layout>
+      <NextSeo title={title} description={description} canonical={url} />
+
       {/* Latest Article */}
       <div className="pb-16 overflow-hidden">
         <div className="lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">

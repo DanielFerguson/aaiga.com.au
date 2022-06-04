@@ -14,6 +14,12 @@ const PostPage = ({ article }) => {
 
   return (
     <Layout>
+      <NextSeo
+        title={article.title}
+        description={article.excerpt}
+        canonical={`https://aaiga.com.au/articles/${article.slug}`}
+      />
+
       {/* <NextSeo
         title={`${post.meta_title} | Aaiga`}
         description={post.meta_description}
