@@ -20,25 +20,8 @@ const useThemeDetector = () => {
 export default function Document() {
   return (
     <Html>
-      <Head>
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicons/favicon-dark-32x32.png?v=M4KN2GElyG"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicons/favicon-dark-16x16.png?v=M4KN2GElyG"
-        />
-        <link
-          rel="shortcut icon"
-          href="/favicons/favicon-dark.ico?v=M4KN2GElyG"
-        />
-      </Head>
-      <body className="bg-white dark:bg-gray-900">
+      <Head>{/* TODO: Favicon */}</Head>
+      <body className="bg-white">
         <Main />
         <NextScript />
       </body>
