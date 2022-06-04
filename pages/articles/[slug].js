@@ -100,11 +100,14 @@ const PostPage = ({ article }) => {
           <div className="flex-shrink-0">
             <a href={`/authors/${article.author.node.slug}`}>
               <span className="sr-only">{article.author.node.name}</span>
-              <img
-                className="h-10 w-10 rounded-full"
-                src={article.author.node.avatar.url}
-                alt={article.author.node.name}
-              />
+              <div className="w-10 h-10 relative">
+                <Image
+                  className="rounded-full"
+                  layout="fill"
+                  src={article.author.node.avatar.url}
+                  alt={article.author.node.name}
+                />
+              </div>
             </a>
           </div>
         </div>

@@ -137,11 +137,14 @@ const FeaturedArticle = ({ post }) => {
           <div className="flex-shrink-0">
             <a href={`/authors/${post.author.node.slug}`}>
               <span className="sr-only">{post.author.node.name}</span>
-              <img
-                className="h-10 w-10 rounded-full"
-                src={post.author.node.avatar.url}
-                alt={post.author.node.name}
-              />
+              <div className="w-10 h-10 relative">
+                <Image
+                  className="rounded-full"
+                  layout="fill"
+                  src={post.author.node.avatar.url}
+                  alt={post.author.node.name}
+                />
+              </div>
             </a>
           </div>
           <div className="ml-3">
@@ -209,11 +212,6 @@ export default function Home({ articles }) {
               <PrettySpanLink key={index} item={course} />
             ))}
           </div>
-          <div className="mt-8 text-center">
-            <Link href="/projects">
-              <a>view more</a>
-            </Link>
-          </div>
         </section>
 
         <NewsletterCta />
@@ -223,7 +221,7 @@ export default function Home({ articles }) {
 }
 
 export async function getStaticProps() {
-  let data = await getPosts();
+  let data = await getPosts(3);
 
   return {
     props: {

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const navigation = {
   aaiga: [
     { name: "Projects", href: "#" },
@@ -96,7 +98,9 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
-            <img className="h-10" src="/aaiga-logo.svg" alt="Aaiga" />
+            <div className="h-10 relative">
+              <Image layout="fill" src="/aaiga-logo.svg" alt="Aaiga" />
+            </div>
             <p className="text-gray-500 text-base">
               Making the world a better place through constructing elegant
               hierarchies.

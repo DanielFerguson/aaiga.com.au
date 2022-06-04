@@ -3,6 +3,7 @@ import NewsletterCta from "@/components/newsletter-cta";
 import { getPosts } from "@/lib/wordpress";
 import { AnnotationIcon } from "@heroicons/react/outline";
 import dayjs from "dayjs";
+import Image from "next/image";
 import Link from "next/link";
 
 function classNames(...classes) {
@@ -45,11 +46,14 @@ const Articles = ({ latestArticle, articles }) => {
           </div>
           <div className="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
             <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-              <img
-                className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 h-96 object-cover lg:absolute lg:right-0 lg:h-full lg:w-full lg:max-w-none"
-                src={latestArticle.featuredImage.node.mediaItemUrl}
-                alt={latestArticle.title}
-              />
+              <div className="w-full h-96 relative lg:absolute lg:right-0 lg:h-full lg:w-full lg:max-w-none">
+                <Image
+                  className="rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 object-cover"
+                  layout="fill"
+                  src={latestArticle.featuredImage.node.mediaItemUrl}
+                  alt={latestArticle.title}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -92,11 +96,14 @@ const Articles = ({ latestArticle, articles }) => {
                 <div className="flex-shrink-0">
                   <a href={`/authors/${post.author.node.slug}`}>
                     <span className="sr-only">{post.author.node.name}</span>
-                    <img
-                      className="h-10 w-10 rounded-full"
-                      src={post.author.node.avatar.url}
-                      alt={post.author.node.name}
-                    />
+                    <div className="h-10 w-10 relative">
+                      <Image
+                        className="rounded-full"
+                        layout="fill"
+                        src={post.author.node.avatar.url}
+                        alt={post.author.node.name}
+                      />
+                    </div>
                   </a>
                 </div>
                 <div className="ml-3">

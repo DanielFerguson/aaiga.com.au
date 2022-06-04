@@ -13,11 +13,14 @@ const Author = ({ author, articles, featuredArticle }) => {
           <div className="md:col-span-1">
             <div className="space-y-4">
               <div className="aspect-w-3 aspect-h-2">
-                <img
-                  className="object-cover shadow-lg rounded-lg w-full"
-                  src={author.avatar.url.replace("s=96", "s=512")}
-                  alt={author.name}
-                />
+                <div className="w-full h-96 relative">
+                  <Image
+                    className="object-cover shadow-lg rounded-lg"
+                    layout="fill"
+                    src={author.avatar.url.replace("s=96", "s=512")}
+                    alt={author.name}
+                  />
+                </div>
               </div>
               <div className="text-lg leading-6 font-medium space-y-1">
                 <h3>{author.name}</h3>

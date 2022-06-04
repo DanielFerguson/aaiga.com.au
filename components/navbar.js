@@ -6,24 +6,23 @@ const NavBar = () => {
       <nav className="hidden lg:grid grid-cols-3 items-center justify-center">
         {/* Page Navigation */}
         <div className="flex gap-12">
-          <Link href="/">
-            <a>home</a>
-          </Link>
           <Link href="/projects">
             <a>projects</a>
           </Link>
           <Link href="/articles">
             <a>articles</a>
           </Link>
-          <Link href="#courses">
+          <Link href="#">
             <a>courses</a>
           </Link>
         </div>
         {/* Logo */}
         <div>
-          <h1 className="text-center text-5xl font-bold">
-            <span className="brand">aaiga.</span>
-          </h1>
+          <Link href="/" passHref>
+            <h1 className="text-center text-5xl font-bold cursor-pointer">
+              <span className="brand">aaiga.</span>
+            </h1>
+          </Link>
         </div>
         {/* Action Buttons */}
         <div className="flex gap-12 justify-end">

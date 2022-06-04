@@ -1,6 +1,7 @@
 import Layout from "@/components/layout";
 import NewsletterCta from "@/components/newsletter-cta";
 import { getUsers } from "@/lib/wordpress";
+import Image from "next/image";
 import Link from "next/link";
 
 const people = [
@@ -48,11 +49,12 @@ const Authors = ({ authors }) => {
                 <Link href={`/authors/${author.slug}`}>
                   <a>
                     <div className="space-y-4">
-                      <div className="aspect-w-3 aspect-h-2">
-                        <img
+                      <div className="aspect-w-3 aspect-h-2 h-96 w-full relative">
+                        <Image
                           className="object-cover shadow-lg rounded-lg"
+                          layout="fill"
                           src={author.avatar.url.replace("s=96", "s=512")}
-                          alt=""
+                          alt="Authors"
                         />
                       </div>
                       <div className="text-lg leading-6 font-medium space-y-1">
