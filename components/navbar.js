@@ -40,7 +40,7 @@ const NavBar = () => {
       </nav>
       <nav className="lg:hidden flex items-center justify-between">
         <div>
-          <h1 className="text-center text-3xl font-bold">
+          <h1 className="text-center text-5xl font-bold">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-pink-500">
               aaiga.
             </span>

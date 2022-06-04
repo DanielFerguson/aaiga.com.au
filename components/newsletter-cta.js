@@ -1,6 +1,6 @@
 const NewsletterCta = () => {
   return (
-    <section>
+    <section id="newsletter">
       <div className="max-w-7xl mx-auto">
         <div className="py-10 px-6 bg-gradient-to-r from-fuchsia-500 to-pink-500 rounded-3xl sm:py-16 sm:px-12 lg:p-20 lg:flex lg:items-center">
           <div className="lg:w-0 lg:flex-1">
