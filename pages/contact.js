@@ -36,12 +36,12 @@ const Contact = () => {
           <div className="lg:pr-8">
             <div className="max-w-md mx-auto sm:max-w-lg lg:mx-0">
               <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-                Let's work together
+                Let&apos;s work together
               </h2>
               <p className="mt-4 text-lg text-gray-500 sm:mt-3">
-                We’d love to hear from you! Send us a message using the form
-                opposite, or email us. We’d love to hear from you! Send us a
-                message using the form opposite, or email us.
+                We&apos;d love to hear from you! Send us a message using the
+                form opposite, or email us. We&apos;d love to hear from you!
+                Send us a message using the form opposite, or email us.
               </p>
               <form
                 action="#"
