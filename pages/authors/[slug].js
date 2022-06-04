@@ -8,7 +8,7 @@ import Link from "next/link";
 const Author = ({ author, articles, featuredArticle }) => {
   return (
     <Layout>
-      <div className="mt-16">
+      <div>
         <div className="space-y-12 md:grid md:grid-cols-3 md:gap-8 md:space-y-0">
           <div className="md:col-span-1">
             <div className="space-y-4">

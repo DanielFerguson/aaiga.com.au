@@ -51,7 +51,7 @@ const PostPage = ({ article }) => {
         description={post.meta_description}
       /> */}
 
-      <div className="relative mt-16">
+      <div className="relative">
         <div className="absolute inset-x-0 bottom-0 h-1/2" />
         <div>
           <div className="relative shadow-xl rounded sm:rounded-2xl overflow-hidden">

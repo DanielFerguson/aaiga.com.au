@@ -171,7 +171,7 @@ export default function Home({ articles }) {
   return (
     <Layout>
       <NextSeo title={title} description={description} canonical={url} />
-      <main className="mt-16 grid gap-24">
+      <main className="grid gap-24">
         {/* Projects */}
         <section>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
