@@ -1,4 +1,5 @@
 import Layout from "@/components/layout";
+import NewsletterCta from "@/components/newsletter-cta";
 import { getPosts } from "@/lib/wordpress";
 import { AnnotationIcon } from "@heroicons/react/outline";
 import dayjs from "dayjs";
@@ -61,8 +62,9 @@ const Articles = ({ latestArticle, articles }) => {
             Recent publications
           </h2>
           <p className="mt-3 text-xl text-gray-500 sm:mt-4">
-            Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat
-            massa dictumst amet. Sapien tortor lacus arcu.
+            We&apos;re committed to assisting as many entrepreneurs as we can.
+            The best way we&apos;ve found that we can do this is by writing
+            informative, in-depth articles about the state of business.
           </p>
         </div>
         <div className="mt-12 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
@@ -115,6 +117,10 @@ const Articles = ({ latestArticle, articles }) => {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="mt-16">
+        <NewsletterCta />
       </div>
     </Layout>
   );
