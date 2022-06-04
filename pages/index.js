@@ -120,9 +120,9 @@ const FeaturedArticle = ({ post }) => {
         <div className="flex-1">
           <p className="text-sm font-medium">
             {post.categories.edges.map(({ node }) => (
-              <a key={node.slug} href="/articles" className="text-indigo-600">
-                {node.name}
-              </a>
+              <Link key={node.slug} href="/articles">
+                <a className="text-indigo-600">{node.name}</a>
+              </Link>
             ))}
           </p>
           <a href={`/articles/${post.slug}`} className="block mt-2">
