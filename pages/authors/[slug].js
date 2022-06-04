@@ -1,4 +1,3 @@
-import { getAuthor, getAuthors } from "@/lib/ghost";
 import { NextSeo, ProfilePageJsonLd } from "next-seo";
 
 const AuthorPage = ({ author }) => {
