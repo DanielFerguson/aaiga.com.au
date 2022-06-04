@@ -115,9 +115,7 @@ const PostPage = ({ article }) => {
         dangerouslySetInnerHTML={{ __html: article.content }}
       />
 
-      <div className="mt-16">
-        <NewsletterCta />
-      </div>
+      <NewsletterCta />
     </Layout>
   );
 };

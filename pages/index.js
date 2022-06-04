@@ -174,7 +174,7 @@ export default function Home({ articles }) {
       <main className="grid gap-24">
         {/* Projects */}
         <section>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {projects.map((project, index) => (
               <PrettySpanLink key={index} item={project} />
             ))}

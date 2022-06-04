@@ -56,7 +56,7 @@ const Articles = ({ latestArticle, articles }) => {
       </div>
 
       {/* Articles */}
-      <div className="relative divide-y-2 divide-gray-200">
+      <div className="relative divide-y-2 divide-gray-200 mt-16">
         <div>
           <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
             Recent publications
@@ -119,9 +119,7 @@ const Articles = ({ latestArticle, articles }) => {
         </div>
       </div>
 
-      <div className="mt-16">
-        <NewsletterCta />
-      </div>
+      <NewsletterCta />
     </Layout>
   );
 };
