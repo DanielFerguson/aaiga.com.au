@@ -1,10 +1,8 @@
 import Link from "next/link";
-import { NextSeo, ArticleJsonLd } from "next-seo";
+import { NextSeo } from "next-seo";
 import Image from "next/image";
 import { getPosts } from "@/lib/wordpress";
 import * as dayjs from "dayjs";
-import { Menu } from "@headlessui/react";
-import { MenuIcon } from "@heroicons/react/outline";
 
 import BgDaonate from "../public/assets/index/bg-observer.jpg";
 import BgObserver from "../public/assets/index/bg-yfocus.jpg";
@@ -173,7 +171,29 @@ const FeaturedArticle = ({ post }) => {
 export default function Home({ articles }) {
   return (
     <Layout>
-      <NextSeo title={title} description={description} canonical={url} />
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          url: url,
+          type: "website",
+          title: title,
+          description: description,
+          images: [
+            {
+              url: "https://aaiga.com.au/assets/index/bg-daonate.jpg",
+              width: 500,
+              height: 500,
+              alt: "Aaiga | Changing the world, one problem solved at a time.",
+            },
+          ],
+        }}
+        twitter={{
+          site: "@aaiga_au",
+          cardType: "summary",
+        }}
+      />
 
       <main className="grid gap-24">
         {/* Projects */}

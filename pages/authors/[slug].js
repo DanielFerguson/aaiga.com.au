@@ -13,7 +13,34 @@ const Author = ({ author, articles, featuredArticle }) => {
 
   return (
     <Layout>
-      <NextSeo title={title} description={description} canonical={url} />
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          url: url,
+          type: "profile",
+          title: title,
+          description: description,
+          profile: {
+            firstName: author.name.split(" ")[0],
+            lastName: author.name.split(" ")[1],
+            gender: "male",
+          },
+          images: [
+            {
+              url: author.avatar.url.replace("s=96", "s=256"),
+              width: 256,
+              height: 256,
+              alt: author.name,
+            },
+          ],
+        }}
+        twitter={{
+          site: "@aaiga_au",
+          cardType: "summary",
+        }}
+      />
 
       <div className="space-y-12 md:grid md:grid-cols-3 md:gap-8 md:space-y-0">
         <div className="md:col-span-1">

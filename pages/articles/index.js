@@ -15,7 +15,29 @@ const url = "https://aaiga.com.au/articles";
 const Articles = ({ latestArticle, articles }) => {
   return (
     <Layout>
-      <NextSeo title={title} description={description} canonical={url} />
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          url: url,
+          type: "website",
+          title: title,
+          description: description,
+          images: [
+            {
+              url: "https://aaiga.com.au/assets/index/bg-daonate.jpg",
+              width: 500,
+              height: 500,
+              alt: "Aaiga | Changing the world, one problem solved at a time.",
+            },
+          ],
+        }}
+        twitter={{
+          site: "@aaiga_au",
+          cardType: "summary",
+        }}
+      />
 
       {/* Latest Article */}
       <div className="pb-16 overflow-hidden">

@@ -11,7 +11,21 @@ const url = "https://aaiga.com.au/contact";
 const Contact = () => {
   return (
     <Layout>
-      <NextSeo title={title} description={description} canonical={url} />
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          url: url,
+          type: "website",
+          title: title,
+          description: description,
+        }}
+        twitter={{
+          site: "@aaiga_au",
+          cardType: "summary",
+        }}
+      />
 
       {/* Header */}
       <div className="pb-24 sm:pb-32">

@@ -13,7 +13,21 @@ const url = "https://aaiga.com.au/authors";
 const Authors = ({ authors }) => {
   return (
     <Layout>
-      <NextSeo title={title} description={description} canonical={url} />
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          url: url,
+          type: "website",
+          title: title,
+          description: description,
+        }}
+        twitter={{
+          site: "@aaiga_au",
+          cardType: "summary",
+        }}
+      />
 
       <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
         <div className="space-y-5 sm:space-y-4">

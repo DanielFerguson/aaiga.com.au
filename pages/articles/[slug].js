@@ -7,6 +7,8 @@ import * as dayjs from "dayjs";
 import NewsletterCta from "@/components/newsletter-cta";
 
 const PostPage = ({ article }) => {
+  const url = `https://aaiga.com.au/articles/${article.slug}`;
+
   const pages = [
     { name: "Articles", href: "/articles", current: false },
     { name: article.title, href: "#", current: true },
@@ -17,45 +19,32 @@ const PostPage = ({ article }) => {
       <NextSeo
         title={article.title}
         description={article.excerpt}
-        canonical={`https://aaiga.com.au/articles/${article.slug}`}
-      />
-
-      {/* <NextSeo
-        title={`${post.meta_title} | Aaiga`}
-        description={post.meta_description}
-        canonical={`https://aaiga.com.au/posts/${post.slug}`}
+        canonical={url}
         openGraph={{
-          title: `${post.og_title} | Aaiga`,
-          description: post.og_description,
-          url: `https://aaiga.com.au/posts/${post.slug}`,
+          url: url,
           type: "article",
+          title: title,
+          description: description,
           article: {
-            publishedTime: post.published_at,
-            modifiedTime: post.updated_at,
-            authors: ["https://aaiga.com.au/authors/danielferguson"],
-            tags: ["Tag A", "Tag B", "Tag C"],
+            publishedTime: article.date,
+            modifiedTime: article.date,
+            authors: [`https://aaiga.com.au/authors/${article.node.slug}`],
+            tags: article.tags.edges.map((tag) => tag.node.name),
           },
-          images: [{ url: post.feature_image }],
-          site_name: "Aaiga",
+          images: [
+            {
+              url: article.featuredImage.node.mediaItemUrl,
+              width: 800,
+              height: 500,
+              alt: article.title,
+            },
+          ],
         }}
         twitter={{
-          handle: "@thedannyferg",
           site: "@aaiga_au",
-          cardType: "summary_large_image",
+          cardType: "summary",
         }}
       />
-      
-      <ArticleJsonLd
-        url={`https://aaiga.com.au/posts/${post.slug}`}
-        title={`${post.meta_title} | Aaiga`}
-        images={[post.feature_image]}
-        datePublished={post.published_at}
-        dateModified={post.updated_at}
-        authorName={["Daniel Ferguson"]}
-        publisherName="Aaiga"
-        publisherLogo="https://aaiga.com.au/aaiga-dark.png"
-        description={post.meta_description}
-      /> */}
 
       <div className="relative">
         <div className="absolute inset-x-0 bottom-0 h-1/2" />
