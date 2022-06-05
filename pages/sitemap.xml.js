@@ -20,7 +20,7 @@ export const getServerSideProps = async ({ res }) => {
 
   const articlesSitemap = articles
     .map((article) =>
-      sitemapGenerator(`/articles/${article.slug}`, article.date)
+      sitemapGenerator(`/articles/${article.slug}`, `${article.date}.683Z`)
     )
     .join("");
 
