@@ -1,5 +1,5 @@
 import { getPosts, getSinglePost } from "@/lib/wordpress";
-import { NextSeo, ArticleJsonLd } from "next-seo";
+import { NextSeo } from "next-seo";
 import Layout from "@/components/layout";
 import Image from "next/image";
 import Breadcrumbs from "@/components/breadcrumbs";
@@ -23,12 +23,14 @@ const PostPage = ({ article }) => {
         openGraph={{
           url: url,
           type: "article",
-          title: title,
-          description: description,
+          title: article.title,
+          description: article.excerpt,
           article: {
             publishedTime: article.date,
             modifiedTime: article.date,
-            authors: [`https://aaiga.com.au/authors/${article.node.slug}`],
+            authors: [
+              `https://aaiga.com.au/authors/${article.author.node.slug}`,
+            ],
             tags: article.tags.edges.map((tag) => tag.node.name),
           },
           images: [
